@@ -9,7 +9,7 @@ public class TwoB {
 	    average (int left, int right) 
 	  {
 		 
-	    return (int) ((left + right) * 0.5) ;
+	    return (int) ((left + right) / 2) ;
 	    
 	  } // average(int,int)
 	} // class TwoB
