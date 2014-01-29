@@ -112,4 +112,5 @@ public class TwoC {
 	  {
 		  return null; //STUB
 	  } // difference (Rational num1, Rational num2)
+	  
 }
