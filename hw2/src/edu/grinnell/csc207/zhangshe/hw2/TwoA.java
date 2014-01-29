@@ -76,7 +76,7 @@ public class TwoA
    * @pre the array size cannot be greater than Integer.Max_Value
    * @post non
    */
-  // input can not be greater than maximum
+  
   public static boolean
     isOddProd (int[] ints)
   {

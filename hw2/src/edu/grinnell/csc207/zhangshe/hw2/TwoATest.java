@@ -84,18 +84,8 @@ public class TwoATest
 
     for (int i = -100; i <= 100; i++)
       {
-        int[] valsTrue = new int[] { i + 1, i + 2, i + 3, i + 4, i + 5 }; // this
-                                                                          // array
-                                                                          // will
-                                                                          // have
-                                                                          // at
-                                                                          // least
-                                                                          // two
-                                                                          // odds,
-                                                                          // so
-                                                                          // it's
-                                                                          // always
-                                                                          // true
+        int[] valsTrue = new int[] { i + 1, i + 2, i + 3, i + 4, i + 5 };
+        // this array will have at least two odds, so it must be true
         int[] valsFalse = new int[] { i + 1, i }; // this array always has an
                                                   // odd and an even, so it's
                                                   // always false
@@ -143,11 +133,12 @@ public class TwoATest
                                + (i + 3) + (i + 4) + " }", expected, original);
       } // for
 
+    // if there is only one element in the array
     int[] oneElem = new int[] { 0 };
     int[] oneExpect = new int[] { 0 };
     assertArrayEquals ("there is only one element in the array", oneExpect,
                        TwoA.reverseInts (oneElem));
-
+    // if there is no element in the array
     int[] empty = new int[] {};
     int[] expectedEmpty = new int[] {};
     assertArrayEquals ("the array is empty", expectedEmpty,

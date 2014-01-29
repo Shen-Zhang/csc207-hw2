@@ -53,7 +53,7 @@ public class Rational
   } // isNegative (Rational num)
 
   /**
-   * The rational number raised to the power of an integer (Observer/Mutator)
+   * The rational number raised to the power of an integer (Mutator)
    */
 
   public Rational
