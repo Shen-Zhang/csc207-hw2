@@ -30,4 +30,5 @@ public class TwoB
     double avg = left / 2.0 + right / 2.0;
     return (int) avg;
   } // average(int,int)}
+  
 } // class TwoB
