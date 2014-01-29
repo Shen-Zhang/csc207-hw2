@@ -3,6 +3,17 @@ package edu.grinnell.csc207.zhangshe.hw2;
 public class TwoA {
 
 
+	/**
+	 * 
+	 * @param a
+	 *		a long integer
+	 * @param b
+	 * 		a long integer
+	 * @return
+	 * 		boolean value
+	 * @pre
+	 * 		Both a and b cannot be greater than Integer.Max_Value or smaller than Integer.Min_Value
+	 */
 	public static boolean isMultiple(long a, long b) {
 		if (a == 0 || b == 0) // if a or b is 0, there always exists an integer
 								// i such as a = b * i
@@ -11,11 +22,29 @@ public class TwoA {
 			return (a % b == 0);
 	} // isMultiple
 
+	/**
+	 * 
+	 * @param i
+	 * 		an integer
+	 * @return
+	 * 		boolean value
+	 * @pre
+	 * 		i cannot be greater than Integer.Max_Value or smaller than Integer.Min_Value
+	 */
 	public static boolean isOdd(int i) {
-		return ((i & 1) == 1);
+		return ((i & 1) == 1); // We determine the odd number by using bitwise operation.
 	} // isOdd
 
-	// Cannot sum up to a number greater than the maximum
+	
+	/**
+	 * 
+	 * @param n
+	 * 		an integer
+	 * @return
+	 * 		a non-negative integer
+	 * @pre
+	 * 		(n/2) * (n/2) cannot be greater than Integer.Max_Value
+	 */
 	public static int oddSumTo(int n) {
 		if (n <= 1)
 			return 0; // for n less or equal to 1, the sum of positive integers
@@ -26,6 +55,15 @@ public class TwoA {
 		} // else
 	} // oddSumTo
 
+	/**
+	 * 
+	 * @param ints
+	 * 		an integer array
+	 * @return
+	 * 		boolean value
+	 * @pre
+	 * 
+	 */
 	// input can not be greater than maximum
 	public static boolean isOddProd(int[] ints) {
 		int sum = 0;
