@@ -2,6 +2,7 @@ package edu.grinnell.csc207.zhangshe.hw2;
 
 public class TwoA {
 
+
 	public static boolean isMultiple(long a, long b) {
 		if (a == 0 || b == 0) // if a or b is 0, there always exists an integer
 								// i such as a = b * i
@@ -20,21 +21,15 @@ public class TwoA {
 			return 0; // for n less or equal to 1, the sum of positive integers
 						// less than 1 is 0.
 		else {
-			if (isOdd(n) == true)
-				n = ((n - 2) + 1) / 2;
-
-			else if (isOdd(n) == false)
-				n = ((n - 1) + 1) / 2;
-
-			return n * n; // 1 + 3 + 5 + 7 + ... + (2n - 1) = n^2
+			int x = n /2;
+			return x * x; // 1 + 3 + 5 + 7 + ... + (2n - 1) = n^2
 		} // else
 	} // oddSumTo
 
 	// input can not be greater than maximum
 	public static boolean isOddProd(int[] ints) {
-		int len = ints.length;
 		int sum = 0;
-		for (int i = 0; i < len; i++) {
+		for (int i = 0; i < ints.length; i++) {
 			if (isOdd(ints[i]) == true)
 				sum++;
 		} //for

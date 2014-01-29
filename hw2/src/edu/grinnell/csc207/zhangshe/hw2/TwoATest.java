@@ -8,7 +8,7 @@ import org.junit.Test;
 public class TwoATest {
 
 	@Test
-	public void test_IsMultiple() {
+	public void testIsMultiple() {
 		// Case 1: two positive integers
 		assertEquals("a = 10, b = 5", true, TwoA.isMultiple(10, 5));
 		assertEquals("a = 5, b = 10", false, TwoA.isMultiple(5, 10));
@@ -34,10 +34,10 @@ public class TwoATest {
 		assertEquals("a = max, b = min", false, TwoA.isMultiple(max, min));
 		assertEquals("a = min, b = 3", false, TwoA.isMultiple(min, 3));
 		assertEquals("a = 3, b = min", false, TwoA.isMultiple(3, max));
-	}// test_IsMultiple
+	}// testIsMultiple
 
 	@Test
-	public void test_isOdd() {
+	public void testIsOdd() {
 		assertEquals("i =3", true, TwoA.isOdd(3));
 		assertEquals("i =4", false, TwoA.isOdd(4));
 		assertEquals("i =0", false, TwoA.isOdd(0));
@@ -47,25 +47,25 @@ public class TwoATest {
 		int min = Integer.MIN_VALUE;
 		assertEquals("i = max", true, TwoA.isOdd(max));
 		assertEquals("i = min", false, TwoA.isOdd(min));
-	} // test_isOdd
+	} // testIsOdd
 
 	@Test
-	public void test_oddSumTo() {
+	public void testOddSumTo() {
 		assertEquals("n = 5", 4, TwoA.oddSumTo(5));
 		assertEquals("n = 8", 16, TwoA.oddSumTo(8));
 		assertEquals("n = -8", 0, TwoA.oddSumTo(-8));
 		assertEquals("n = 0", 0, TwoA.oddSumTo(0));
-	} //test_oddSumTo
+	} //testOddSumTo
 
 	@Test
 	public void test_isOddProd() {
 		int[] vals = new int[] { 1, 2, 3, 4, 5 };
 		assertEquals("vals", true, TwoA.isOddProd(vals));
 
-	} // test_isOddProd
+	} // testIsOddProd
 
 	@Test
-	public void test_allDistinct() {
+	public void testAllDistinct() {
 		int[] vals = new int[4];
 		vals[0] = -1;
 		// initialize second element
@@ -75,10 +75,10 @@ public class TwoATest {
 		vals[3] = 0;
 
 		assertEquals("vals", true, TwoA.allDistinct(vals));
-	} // test_allDinstinct
+	} // testAllDinstinct
 
 	@Test
-	public void test_reverseInts() {
+	public void testReverseInts() {
 		for (int i = -100; i <= 100; i += 5) {
 			int[] original = new int[] { i, i + 1, i + 2, i + 3, i + 4 };
 			int[] expected = new int[] { i + 4, i + 3, i + 2, i + 1, i };
@@ -87,6 +87,6 @@ public class TwoATest {
 			assertArrayEquals("original array { " + i + (i + 1) + (i + 2)
 					+ (i + 3) + (i + 4) + " }", expected, original);
 		} // for
-	} // test_reverseInts
+	} // testReverseInts
 
 }
