@@ -1,3 +1,9 @@
+/**
+ * S14-CSC207-Assignment2
+ * Author: Shen Zhang, Fengyuan Li
+ * Date: Jan 29, 2014
+ */
+
 package edu.grinnell.csc207.zhangshe.hw2;
 
 public class TwoB
