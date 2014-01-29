@@ -15,7 +15,6 @@ public class Rational
 
   /**
    * Increment the given rational number. (Mutator)
-   * 
    */
   public Rational
     increment (Rational num)
@@ -127,7 +126,7 @@ public class Rational
    * Take an array of rational numbers and sort them from largerst to smallest
    * (Mutator)
    */
-  public Rational
+  public Rational[]
     sort (Rational[] nums)
   {
     return null; // STUB
@@ -137,7 +136,7 @@ public class Rational
    * Take two arrays of rational numbers and merge them into a new array
    * (Observer/Constructor)
    */
-  public Rational
+  public Rational[]
     merge (Rational[] nums1, Rational[] nums2)
   {
     return null; // STUB
@@ -152,4 +151,66 @@ public class Rational
   {
     return false; // STUB
   } // compareArr (Rational[] nums1, Rational[] nums2)
+
+  /**
+   * Get the intersection of two arrays of rational numbers
+   * (Observer/Constructor)
+   */
+
+  public Rational[]
+    intersect (Rational[] nums1, Rational[] nums2)
+  {
+    return null; // STUB
+  } // intersect (Rational[] nums1, Rational[] nums2)
+
+  /**
+   * Get the union of two arrays of rational numbers (Observer/Constructor)
+   */
+
+  public Rational[]
+    union (Rational[] nums1, Rational[] nums2)
+  {
+    return null; // STUB
+  } // union(Rational[] nums1, Rational[] nums2)
+
+  /**
+   * Compute how many times a national numbers appear in an array (Observer)
+   */
+  public int
+    apperance (Rational[] arr, Rational num)
+  {
+    return 0; // STUB
+  } // apperance (Rational[] arr, Rational num)
+
+  
+  /**
+   * Insert a rational numbers into an array (Mutator)
+   */
+  public Rational[]
+      insert (Rational[] arr, Rational num, int index)
+  {
+    return null; // STUB
+  } // insert (Rational[] arr, Rational num, int index)
+  
+  /**
+   * Change a specific number in the array (Murator)
+   */
+  
+  public Rational[]
+      change (Rational[] arr, Rational num, int index)
+  {
+    return null; // STUB
+  } // change (Rational[] arr, Rational num, int index
+
+  
+  /**
+   * Get the length of array of rational numbers (Observer)
+   */
+  
+  public int getLength (Rational[] arr)
+  {
+    return 0; // STUB
+  } // getLength (Rational[] arr)
+  
 }// class Rational
+
