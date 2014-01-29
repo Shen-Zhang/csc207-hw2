@@ -110,7 +110,31 @@ public class TwoC {
 	  
 	  public Rational difference (Rational num1, Rational num2)
 	  {
-		  return null; //STUB
+		  return null; // STUB
 	  } // difference (Rational num1, Rational num2)
+
 	  
+	  /**
+	   * Take an array of rational numbers and sort them from largerst to smallest (Mutator)
+	   */
+	  public Rational sort (Rational[] nums)
+	  {
+	    return null; // STUB
+	  } // sort (Rational[] nums)
+	  
+	  /**
+	   * Take two arrays of rational numbers and merge them into a new array (Observer/Constructor)
+	   */
+	  public Rational merge (Rational[] nums1, Rational[] nums2)
+	  {
+	    return null; // STUB
+	  } // merge (Rational[] nums)
+	  
+	  /**
+	   * Compare two arrays of rational numbers, return true if they are identical  (Observer)
+	   */
+	  public boolean compareArr (Rational[] nums1, Rational[] nums2)
+	  {
+	    return false; // STUB
+	  } // compareArr (Rational[] nums1, Rational[] nums2)
 }
