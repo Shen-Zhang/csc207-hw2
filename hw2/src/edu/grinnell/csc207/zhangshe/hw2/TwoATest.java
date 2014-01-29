@@ -2,7 +2,6 @@ package edu.grinnell.csc207.zhangshe.hw2;
 
 import static org.junit.Assert.*;
 
-
 import org.junit.Test;
 
 public class TwoATest {
@@ -38,11 +37,18 @@ public class TwoATest {
 
 	@Test
 	public void testIsOdd() {
-		assertEquals("i =3", true, TwoA.isOdd(3));
-		assertEquals("i =4", false, TwoA.isOdd(4));
-		assertEquals("i =0", false, TwoA.isOdd(0));
-		assertEquals("i =-3", true, TwoA.isOdd(-3));
-		assertEquals("i =-4", false, TwoA.isOdd(-4));
+
+		// Case 1: Even number
+		for (int i = -100; i < 100; i += 2) {
+			assertEquals("i = " + i, false, TwoA.isOdd(i));
+
+		}
+
+		// Case 2: Odd number
+		for (int i = -99; i < 100; i += 2) {
+			assertEquals("i = " + i, true, TwoA.isOdd(i));
+
+		}
 		int max = Integer.MAX_VALUE;
 		int min = Integer.MIN_VALUE;
 		assertEquals("i = max", true, TwoA.isOdd(max));
@@ -51,30 +57,41 @@ public class TwoATest {
 
 	@Test
 	public void testOddSumTo() {
-		assertEquals("n = 5", 4, TwoA.oddSumTo(5));
-		assertEquals("n = 8", 16, TwoA.oddSumTo(8));
-		assertEquals("n = -8", 0, TwoA.oddSumTo(-8));
-		assertEquals("n = 0", 0, TwoA.oddSumTo(0));
-	} //testOddSumTo
+		// Multiple Cases: Test from 0 to 199
+		for (int m = 0; m < 200; m++) {
+			int sum = 0; // set sum to 0
+			for (int i = 1; i < m; i += 2)
+				sum += i; // add odd number
+			assertEquals("n = " + m, sum, TwoA.oddSumTo(m));
+		}
+
+	} // testOddSumTo
 
 	@Test
 	public void test_isOddProd() {
-		int[] vals = new int[] { 1, 2, 3, 4, 5 };
-		assertEquals("vals", true, TwoA.isOddProd(vals));
-
+		for (int i = -100; i <= 100; i++) {
+			int[] valsTrue = new int[] { i + 1, i + 2, i + 3, i + 4, i + 5 };
+			int[] valsFalse = new int[] { i + 1, i };
+			assertEquals("vals", true, TwoA.isOddProd(valsTrue));
+			assertEquals("vals", false, TwoA.isOddProd(valsFalse));
+		}
 	} // testIsOddProd
 
 	@Test
 	public void testAllDistinct() {
-		int[] vals = new int[4];
-		vals[0] = -1;
-		// initialize second element
-		vals[1] = 201;
-		// and so forth
-		vals[2] = 10;
-		vals[3] = 0;
+		// different list of true cases
 
-		assertEquals("vals", true, TwoA.allDistinct(vals));
+		for (int i = -100; i <= 100; i++) {
+			int[] vals = new int[] { i + 1, i + 20, i + 10, i + 3 };
+
+			assertEquals("vals", true, TwoA.allDistinct(vals));
+		}
+		// different list of false cases
+		for (int i = -100; i <= 100; i++) {
+			int[] vals = new int[] { i + 1, i + 5, i + 10, i + 5 };
+
+			assertEquals("vals", false, TwoA.allDistinct(vals));
+		}
 	} // testAllDinstinct
 
 	@Test
