@@ -6,19 +6,19 @@ public class TwoB
    * Compute the average of two integers. Rounds toward zero if the average is
    * not a whole number.
    */
-  
+
   public static int
-  /**
-   * 
-   * @param left
-   *    an integer
-   * @param right
-   *    an integer
-   * @return
-   *    the average of left and right. The number will round towards zero if the average is not a whole number
-   * @pre
-   *    both left and right numbers should not be greater than Integer.Max_Value or smaller than Integer.Min_Value
-   */
+    /**
+     * 
+     * @param left
+     *          an integer
+     * @param right
+     *          an integer
+     * @return the average of left and right. The number will round towards zero
+     *         if the average is not a whole number
+     * @pre both left and right numbers should not be greater than
+     *      Integer.Max_Value or smaller than Integer.Min_Value
+     */
     average (int left, int right)
   {
     /**
@@ -30,5 +30,5 @@ public class TwoB
     double avg = left / 2.0 + right / 2.0;
     return (int) avg;
   } // average(int,int)}
-  
+
 } // class TwoB

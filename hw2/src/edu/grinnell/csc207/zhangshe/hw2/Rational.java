@@ -182,35 +182,34 @@ public class Rational
     return 0; // STUB
   } // apperance (Rational[] arr, Rational num)
 
-  
   /**
    * Insert a rational numbers into an array (Mutator)
    */
   public Rational[]
-      insert (Rational[] arr, Rational num, int index)
+    insert (Rational[] arr, Rational num, int index)
   {
     return null; // STUB
   } // insert (Rational[] arr, Rational num, int index)
-  
+
   /**
    * Change a specific number in the array (Murator)
    */
-  
+
   public Rational[]
-      change (Rational[] arr, Rational num, int index)
+    change (Rational[] arr, Rational num, int index)
   {
     return null; // STUB
   } // change (Rational[] arr, Rational num, int index
 
-  
   /**
    * Get the length of array of rational numbers (Observer)
    */
-  
-  public int getLength (Rational[] arr)
+
+  public int
+    getLength (Rational[] arr)
   {
     return 0; // STUB
   } // getLength (Rational[] arr)
-  
+
 }// class Rational
 

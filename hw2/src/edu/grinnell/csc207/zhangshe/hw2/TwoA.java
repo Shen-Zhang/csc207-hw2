@@ -51,7 +51,7 @@ public class TwoA
    *          an integer
    * @return a non-negative integer
    * @pre (n/2) * (n/2) cannot be greater than Integer.Max_Value
-   * @post x*x would not be greater than Integer.Max_Value
+   * @post the sum would not be greater than Integer.Max_Value
    */
   public static int
     oddSumTo (int n)
@@ -86,7 +86,7 @@ public class TwoA
         if (isOdd (ints[i]) == true)
           sum++;
       } // for
-    return (sum >= 2);
+    return (sum >= 2); // if there is at least 2 odd numbers inside the array, there must exists a pair of numbers which product is odd
   } // isOddProd
 
   /**
@@ -102,7 +102,7 @@ public class TwoA
     allDistinct (int[] ints)
   {
     int len = ints.length;
-    for (int i = 0; i < len; i++)
+    for (int i = 0; i < len; i++) // use nested for loop to compare all pairs of numbers
       for (int j = i + 1; j < len; j++)
         {
           if (ints[i] == ints[j])
@@ -134,8 +134,8 @@ public class TwoA
 
         for (int i = 0; i < n / 2; i++)
           {
-            int temp = ints[i];
-            ints[i] = ints[ints.length - 1 - i];
+            int temp = ints[i]; // save the ints[i] into a temporary value
+            ints[i] = ints[ints.length - 1 - i]; 
             ints[ints.length - 1 - i] = temp;
           } // for
         return ints;

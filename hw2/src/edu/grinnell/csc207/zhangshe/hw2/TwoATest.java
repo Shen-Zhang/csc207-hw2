@@ -81,15 +81,29 @@ public class TwoATest
   public void
     test_isOddProd ()
   {
-    
+
     for (int i = -100; i <= 100; i++)
       {
-        int[] valsTrue = new int[] { i + 1, i + 2, i + 3, i + 4, i + 5 }; // this array will have at least two odds, so it's always true
-        int[] valsFalse = new int[] { i + 1, i }; // this array always has an odd and an even, so it's always false
-        assertEquals ("{ " + (i+1) + (i+2) + (i+3) + (i+4) + (i+5) +" }", true, TwoA.isOddProd (valsTrue));
-        assertEquals ((i+1) + "and" + i, false, TwoA.isOddProd (valsFalse));
+        int[] valsTrue = new int[] { i + 1, i + 2, i + 3, i + 4, i + 5 }; // this
+                                                                          // array
+                                                                          // will
+                                                                          // have
+                                                                          // at
+                                                                          // least
+                                                                          // two
+                                                                          // odds,
+                                                                          // so
+                                                                          // it's
+                                                                          // always
+                                                                          // true
+        int[] valsFalse = new int[] { i + 1, i }; // this array always has an
+                                                  // odd and an even, so it's
+                                                  // always false
+        assertEquals ("{ " + (i + 1) + (i + 2) + (i + 3) + (i + 4) + (i + 5)
+                          + " }", true, TwoA.isOddProd (valsTrue));
+        assertEquals ((i + 1) + "and" + i, false, TwoA.isOddProd (valsFalse));
       }
-    
+
   } // testIsOddProd
 
   @Test
@@ -102,14 +116,16 @@ public class TwoATest
       {
         int[] vals = new int[] { i + 1, i + 20, i + 10, i + 3 };
 
-        assertEquals ("{ " + (i+1) + (i+20) + (i+10) + (i+3)+ "}", true, TwoA.allDistinct (vals));
+        assertEquals ("{ " + (i + 1) + (i + 20) + (i + 10) + (i + 3) + "}",
+                      true, TwoA.allDistinct (vals));
       }
     // different lists of false cases
     for (int i = -100; i <= 100; i++)
       {
         int[] vals = new int[] { i + 1, i + 5, i + 10, i + 5 };
 
-        assertEquals ("{ " + (i+1) + (i+5) + (i+10) + (i+5) +"}", false, TwoA.allDistinct (vals));
+        assertEquals ("{ " + (i + 1) + (i + 5) + (i + 10) + (i + 5) + "}",
+                      false, TwoA.allDistinct (vals));
       }
   } // testAllDinstinct
 
@@ -126,14 +142,16 @@ public class TwoATest
         assertArrayEquals ("original array { " + i + (i + 1) + (i + 2)
                                + (i + 3) + (i + 4) + " }", expected, original);
       } // for
-    
-    int[] oneElem = new int[] {0};
-    int[] oneExpect = new int[] {0};
-    assertArrayEquals ("there is only one element in the array", oneExpect, TwoA.reverseInts(oneElem));
-    
-    int[] empty = new int[] { };
+
+    int[] oneElem = new int[] { 0 };
+    int[] oneExpect = new int[] { 0 };
+    assertArrayEquals ("there is only one element in the array", oneExpect,
+                       TwoA.reverseInts (oneElem));
+
+    int[] empty = new int[] {};
     int[] expectedEmpty = new int[] {};
-    assertArrayEquals ("the array is empty", expectedEmpty, TwoA.reverseInts (empty));
+    assertArrayEquals ("the array is empty", expectedEmpty,
+                       TwoA.reverseInts (empty));
   } // testReverseInts
 
 }
